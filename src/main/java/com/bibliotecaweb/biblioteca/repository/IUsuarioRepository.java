@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface IUsuarioRepository extends JpaRepository<UsuarioEntity, Integer>{
+    UsuarioEntity findByRutUsuario(String rut);
 }

@@ -28,4 +28,9 @@ public class indexController {
         model.addAttribute("saludo","Hola desde el controller");
         return "index";
     }
+    
+    @RequestMapping("/login")
+    public String login(){
+        return "login";
+    }
 }
