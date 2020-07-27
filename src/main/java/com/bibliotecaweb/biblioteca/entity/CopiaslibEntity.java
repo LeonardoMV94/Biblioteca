@@ -15,6 +15,7 @@ public class CopiaslibEntity {
     private Byte estado;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_COPIALIB")
     public Integer getIdCopialib() {
         return idCopialib;

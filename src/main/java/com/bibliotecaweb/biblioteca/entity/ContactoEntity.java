@@ -19,6 +19,7 @@ public class ContactoEntity {
     private Byte estado;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_CONTACTO")
     public Integer getIdContacto() {
         return idContacto;

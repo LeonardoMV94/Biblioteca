@@ -10,6 +10,7 @@ public class CopialibTipoVentaEntity {
     private String descripcion;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_COPIALIB_TIPO_VNT")
     public Integer getIdCopialibTipoVnt() {
         return idCopialibTipoVnt;

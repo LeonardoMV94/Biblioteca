@@ -17,6 +17,7 @@ public class DetalleVentaLibroEntity {
     private Integer valorDetvta;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_DETALLE")
     public Integer getIdDetalle() {
         return idDetalle;

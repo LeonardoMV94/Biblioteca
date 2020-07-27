@@ -12,6 +12,7 @@ public class AutorEntity {
     private String maternoAut;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_AUTOR")
     public Integer getIdAutor() {
         return idAutor;

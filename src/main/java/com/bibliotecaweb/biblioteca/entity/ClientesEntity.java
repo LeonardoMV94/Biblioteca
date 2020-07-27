@@ -25,6 +25,7 @@ public class ClientesEntity {
     private Byte estado;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_RUTCLI")
     public Integer getIdRutcli() {
         return idRutcli;

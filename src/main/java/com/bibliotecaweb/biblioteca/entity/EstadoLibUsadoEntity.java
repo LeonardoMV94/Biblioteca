@@ -11,6 +11,7 @@ public class EstadoLibUsadoEntity {
     private Boolean desctoEstlibus;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_ESTADOLIBUSD")
     public Integer getIdEstadolibusd() {
         return idEstadolibusd;

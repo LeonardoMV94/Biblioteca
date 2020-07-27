@@ -18,6 +18,7 @@ public class CompralibrosEntity {
     private Integer idRutTrab;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_COMPRA")
     public Integer getIdCompra() {
         return idCompra;

@@ -40,6 +40,9 @@ public class ProvinciaEntity {
         this.idRegionFk = idRegionFk;
     }
 
+    @OneToMany
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

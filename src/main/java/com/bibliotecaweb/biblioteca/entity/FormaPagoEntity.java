@@ -10,6 +10,7 @@ public class FormaPagoEntity {
     private String descripcion;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_FORMA_PAGO")
     public Integer getIdFormaPago() {
         return idFormaPago;

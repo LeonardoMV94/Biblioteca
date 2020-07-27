@@ -10,6 +10,7 @@ public class CargosEntity {
     private String descripcionCg;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_CARGOTRAB")
     public Integer getIdCargotrab() {
         return idCargotrab;

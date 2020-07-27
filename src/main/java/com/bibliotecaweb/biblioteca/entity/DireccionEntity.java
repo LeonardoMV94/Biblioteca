@@ -24,6 +24,7 @@ public class DireccionEntity {
     private Byte estado;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_DIRECCION")
     public Integer getIdDireccion() {
         return idDireccion;

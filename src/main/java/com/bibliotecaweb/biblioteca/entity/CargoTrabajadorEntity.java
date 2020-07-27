@@ -16,6 +16,7 @@ public class CargoTrabajadorEntity {
     private Byte estado;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_TRABCARG")
     public Integer getIdTrabcarg() {
         return idTrabcarg;

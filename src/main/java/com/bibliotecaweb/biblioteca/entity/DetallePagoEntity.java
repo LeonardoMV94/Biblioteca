@@ -12,6 +12,7 @@ public class DetallePagoEntity {
     private Integer idVenta;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_DETPAGO")
     public Integer getIdDetpago() {
         return idDetpago;

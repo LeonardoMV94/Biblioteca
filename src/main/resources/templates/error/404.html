@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>Error 404</title>
+    <link rel="stylesheet" th:href="@{/css/bulma.css}"/>
 </head>
 <body>
-    <h1>Error 404</h1>
+
+   <img alt="Página no encontrada" class="image" th:src="@{/img/404.jpg}" height="500px" width="800px">
+    <button th:href="@{/index}">Ir al Home</button>
 </body>
 </html>

@@ -7,6 +7,7 @@ import java.util.Objects;
 @Table(name = "actividad_economica", schema = "biblioteca", catalog = "")
 public class ActividadEconomicaEntity {
     private Integer idActeco;
+    
     private String descripcionAct;
 
     @Id

@@ -16,6 +16,7 @@ public class CorreosEntity {
     private Byte estado;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_CORREO")
     public Integer getIdCorreo() {
         return idCorreo;

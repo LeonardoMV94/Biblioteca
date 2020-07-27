@@ -10,6 +10,7 @@ public class EstadoCivilEntity {
     private String descripcionEcivil;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_ECIVIL")
     public Integer getIdEcivil() {
         return idEcivil;

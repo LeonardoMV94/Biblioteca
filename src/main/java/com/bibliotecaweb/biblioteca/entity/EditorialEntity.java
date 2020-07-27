@@ -15,6 +15,7 @@ public class EditorialEntity {
     private String emailEdit;
 
     @Id
+
     @Column(name = "ID_EDITORIAL")
     public Integer getIdEditorial() {
         return idEditorial;

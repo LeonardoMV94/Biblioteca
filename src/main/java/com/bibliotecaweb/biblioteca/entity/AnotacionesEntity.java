@@ -17,6 +17,7 @@ public class AnotacionesEntity {
     private Byte estado;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_ANOTACIONES")
     public Integer getIdAnotaciones() {
         return idAnotaciones;

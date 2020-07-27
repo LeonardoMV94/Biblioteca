@@ -10,6 +10,7 @@ public class IdiomasEntity {
     private String idioma;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_IDIOMA")
     public Integer getIdIdioma() {
         return idIdioma;
