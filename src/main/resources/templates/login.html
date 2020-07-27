@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="es" xmlns:th="http://www.thymeLeaf.org">
 <head>
     <meta charset="UTF-8" http-equiv="Accept" content="">
-    <link rel="stylesheet" href="@{/css/logincss.css}">
+    <link rel="stylesheet" th:href="@{/css/logincss.css}">
     <title>Home</title>
 </head>
 <body>
@@ -39,7 +39,7 @@
                 <input type="email"
                        id="femail"
                        class="c-form__input"
-                       th:field="*{email}"
+                       field="email"
                        placeholder=" "
                        pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
                        required>
@@ -55,7 +55,7 @@
                 <input type="password"
                         id="fpass"
                         class="c-form__input"
-                       th:field="*{password}"
+                       field="password"
                         placeholder=" "
                         required>
 
