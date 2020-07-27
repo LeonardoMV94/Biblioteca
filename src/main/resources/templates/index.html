@@ -1,39 +1,13 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
-<link rel="stylesheet" th:href="@{/css/bulma.min.css}"/>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Home</title>
+    ...
 </head>
 <body>
-<h1 class="has-text-centered">Lista de regiones</h1>
 
+<div th:insert="fragment/header :: header" >
 
-<table class="table">
-    <tbody th:each="reg : ${regiones}" th:remove="tag">
-    <tr>
-        <td th:text="${reg.nombreReg}">...</td>
-
-        <td th:text="${reg.numeroReg}">...</td>
-    </tr>
-
-    </tbody>
-</table>
-
-<br>
-<br>
-
-<table class="table">
-    <tbody th:each="pro : ${provincias}" th:remove="tag">
-    <tr>
-        <td th:text="${pro.nombreProv}">...</td>
-
-
-    </tr>
-
-    </tbody>
-</table>
-
-
+</div>
 </body>
+</html>
 </html>
