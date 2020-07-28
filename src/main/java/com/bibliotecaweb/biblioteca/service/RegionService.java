@@ -29,4 +29,21 @@ public class RegionService {
     public void eliminar(int id) {
         repo.deleteById(id);
     }
+
+    public String editarRegion(RegionEntity regionEditar){
+        int id = regionEditar.getIdRegion();
+        if (repo.findById(id).isPresent()){
+            RegionEntity region = new RegionEntity();
+            region.setIdRegion(regionEditar.getIdRegion());
+            region.setNombreReg(regionEditar.getNombreReg());
+            region.setNumeroReg(regionEditar.getNumeroReg());
+            // Guardado Listo
+           repo.save(region);
+            return "region guardada";
+        }
+        return "error al guardar region";
+    }
+
+
+
 }

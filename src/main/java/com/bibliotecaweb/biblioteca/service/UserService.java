@@ -12,7 +12,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,14 +27,23 @@ public class UserService implements UserDetailsService {
     public UserDetails loadUserByUsername(String rutUsuario) throws UsernameNotFoundException {
         UsuarioEntity us = repo.findByRutUsuario(rutUsuario);
 
-      //  List<RolesUsuarioEntity> listRol = roles.findAll();
+        List<RolesUsuarioEntity> listRol = roles.findAll();
         List<GrantedAuthority> listRolAuth = new ArrayList<>();
-        listRolAuth.add(new SimpleGrantedAuthority("admin"));
-        listRolAuth.add(new SimpleGrantedAuthority("vendedor"));
-        listRolAuth.add(new SimpleGrantedAuthority("cliente"));
+
+        /* añadiendo roles desde la base de datos*/
+        for (RolesUsuarioEntity r : listRol) {
+            listRolAuth.add(new SimpleGrantedAuthority(r.getRolUsuario()));
+        }
+
 
         UserDetails userDetails = new User(us.getRutUsuario(),us.getClave(),listRolAuth);
         return  userDetails;
 
     }
+
+    public UsuarioEntity findUsuario(String rutUsuario){
+        return repo.findByRutUsuario(rutUsuario);
+    }
+
+
 }
