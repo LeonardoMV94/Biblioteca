@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <link rel="stylesheet" th:href="@{/css/bulma.min.css}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script th:src="@{/js/datatableLibro.js}"></script>
+</head>
+
+<body>
+
+<main><h1>Libros</h1>
+    <section class="column is-centered">
+        <div class="table is-bordered is-striped is-narrow is-hoverable">
+
+            <table id="libroTable" class="table is-bordered is-striped is-narrow is-hoverable">
+
+                <!-- Header Table -->
+                <thead>
+                <tr class="has-background-primary">
+                    <th>Codigo Barra</th>
+                    <th>ISBM</th>
+                    <th>ISBN Original</th>
+                    <th>Titulo del Libro</th>
+                    <th>N. Paginas</th>
+                    <th>Ano de Publicacion</th>
+                    <th>Edicion</th>
+                    <th>Editorial</th>
+                    <th></th>
+
+                </tr>
+                </thead>
+                <!-- Footer Table -->
+                <tfoot>
+                <tr>
+                    <th>Codigo Barra</th>
+                    <th>ISBM</th>
+                    <th>ISBN Original</th>
+                    <th>Titulo del Libro</th>
+                    <th>N. Paginas</th>
+                    <th>Ano de Publicacion</th>
+                    <th>Edicion</th>
+                    <th>Editorial</th>
+
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <div class="modal" id="miModal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Editar Libro</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="field">
+                        <label class="label">Codigo Barra</label>
+                        <div class="control">
+                            <input id="cod" class="input" type="text">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">ISBM</label>
+                        <div class="control">
+                            <input id="isbm" class="input" type="text" placeholder="">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">ISBM ORIGINAL</label>
+                        <div class="control">
+                            <input id="isbmo" class="input" type="text">
+                    </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">TITULO LIBRO</label>
+                        <div class="control">
+                            <input id="titleLibro" class="input" type="text">
+                    </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">NUMERO PAGINAS</label>
+                        <div class="control">
+                            <input id="nPag" class="input" type="text">
+                    </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">ANO PUBLICACION</label>
+                        <div class="control">
+                            <input id="aPub" class="input" type="text">
+                    </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">EDICION</label>
+                        <div class="control">
+                            <input id="edic" class="input" type="text">
+                    </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">EDITORIAL</label>
+                        <div class="control">
+                            <input id="edit" class="input" type="text">
+                    </div>
+                    </div>
+
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button is-success">Guardar</button>
+                    <button class="button">Cancel</button>
+                </footer>
+            </div>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
