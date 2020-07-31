@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
@@ -31,18 +32,15 @@ public class LibroServiceImpl implements LibroService{
     }
 
     @Override
-    public Integer agregarLibro(LibroEntity l) {
-        return null;
+    @Transactional
+    public void save(LibroEntity l) {
+       iLibroRepository.save(l);
     }
 
     @Override
-    public Integer editarLibro(LibroEntity l) {
-        return null;
-    }
-
-    @Override
-    public void deleteLibro(Integer idCodBarra) {
-
+    @Transactional
+    public void delete(Integer idCodBarra) {
+        iLibroRepository.deleteById(idCodBarra);
     }
 
 

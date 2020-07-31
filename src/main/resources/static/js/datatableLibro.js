@@ -12,8 +12,7 @@ $(document).ready( function () {
             { "mData": "añopubliLib" },
             { "mData": "edicionLib" },
             { "mData": "idEditorial" },
-            {"defaultContent": "<button type='button' class='eliminar button is-danger'>Eliminar</button>" +
-                    "<button type='button' data-toggle='modal' data-target='#miModal'  class='editar button is-warning'>Editar</button>"}
+            {"defaultContent": "<button data-target='#miModal' data-toggle='modal' type='button' class='editar btn btn-warning'>Editar</button><button data-target='#miModal' type='button' class='btn btn-danger'>Eliminar</button>"}
         ]
     })
         obtenerDatoEditar("#libroTable tbody", table);

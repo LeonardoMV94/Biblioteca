@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8"/>
     <title></title>
-    <link rel="stylesheet" th:href="@{/css/bulma.min.css}"/>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
@@ -14,14 +15,14 @@
 
 <body>
 
-<main><h1>Libros</h1>
+<main class="container-fluid"><h1>Libros</h1>
     <section class="column is-centered">
         <div class="table is-bordered is-striped is-narrow is-hoverable">
 
-            <table id="libroTable" class="table is-bordered is-striped is-narrow is-hoverable">
+            <table id="libroTable" class="table table-bordered">
 
                 <!-- Header Table -->
-                <thead>
+                <thead class="p-3 mb-2 bg-info text-white" >
                 <tr class="has-background-primary">
                     <th>Codigo Barra</th>
                     <th>ISBM</th>
@@ -52,69 +53,64 @@
             </table>
         </div>
 
-        <div class="modal" id="miModal">
-            <div class="modal-background"></div>
-            <div class="modal-card">
-                <header class="modal-card-head">
-                    <p class="modal-card-title">Editar Libro</p>
-                    <button class="delete" aria-label="close"></button>
-                </header>
-                <section class="modal-card-body">
-                    <div class="field">
-                        <label class="label">Codigo Barra</label>
-                        <div class="control">
-                            <input id="cod" class="input" type="text">
-                        </div>
+        <div class="modal" id="miModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Libro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label class="">Codigo Barra</label>
+                            <input id="cod" class="form-control" type="text">
+
                     </div>
-                    <div class="field">
-                        <label class="label">ISBM</label>
-                        <div class="control">
-                            <input id="isbm" class="input" type="text" placeholder="">
-                        </div>
+                    <div class="form-group col-md-6">
+                        <label class="">ISBM</label>
+                            <input id="isbm" class="form-control" type="text">
                     </div>
-                    <div class="field">
-                        <label class="label">ISBM ORIGINAL</label>
-                        <div class="control">
-                            <input id="isbmo" class="input" type="text">
+                    <div class="form-group col-md-6">
+                        <label class="">ISBM ORIGINAL</label>
+                        <input id="isbmo" class="form-control" type="text">
                     </div>
+                    <div class="form-group col-md-6">
+                        <label class="">TITULO LIBRO</label>
+                        <input id="titleLibro" class="form-control" type="text">
                     </div>
-                    <div class="field">
-                        <label class="label">TITULO LIBRO</label>
-                        <div class="control">
-                            <input id="titleLibro" class="input" type="text">
+                    <div class="form-group col-md-6">
+                        <label class="">NUMERO PAGINAS</label>
+                        <input id="nPag" class="form-control" type="text">
                     </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">NUMERO PAGINAS</label>
-                        <div class="control">
-                            <input id="nPag" class="input" type="text">
-                    </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">ANO PUBLICACION</label>
-                        <div class="control">
-                            <input id="aPub" class="input" type="text">
-                    </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">EDICION</label>
-                        <div class="control">
-                            <input id="edic" class="input" type="text">
-                    </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">EDITORIAL</label>
-                        <div class="control">
-                            <input id="edit" class="input" type="text">
-                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="">ANO PUBLICACION</label>
+                        <input id="aPub" class="form-control" type="text">
                     </div>
 
-                </section>
-                <footer class="modal-card-foot">
-                    <button class="button is-success">Guardar</button>
-                    <button class="button">Cancel</button>
-                </footer>
+                    <div class="form-group col-md-6">
+                        <label class="">EDICION</label>
+                        <input id="edic" class="form-control" type="text">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label class="">EDITORIAL</label>
+                        <input id="edit" class="form-control" type="text">
+                    </div>
+
+
+
+                </div>
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
             </div>
+
+        </div>
         </div>
     </section>
 </main>

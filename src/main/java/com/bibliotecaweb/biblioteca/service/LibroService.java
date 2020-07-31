@@ -8,9 +8,8 @@ public interface LibroService {
 
     List<LibroEntity> getAllLibroEntity();
     LibroEntity getLibroEntityById(Integer idCodBarra);
-    Integer agregarLibro(LibroEntity l);
-    Integer editarLibro(LibroEntity l);
-    void deleteLibro(Integer idCodBarra);
+    void save(LibroEntity l);
+    void delete(Integer idCodBarra);
 
 
 
