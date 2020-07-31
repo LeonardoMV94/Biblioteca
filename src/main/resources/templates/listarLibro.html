@@ -4,19 +4,35 @@
 <head>
     <meta charset="utf-8"/>
     <title></title>
-
+    <!--css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" >
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" >
+    <!--script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script th:src="@{/js/datatableLibro.js}"></script>
 </head>
 
 <body>
+<header>
+    <h3 class="text-center has-text-light">Biblioteca</h3>
+</header>
 
-<main class="container-fluid"><h1>Libros</h1>
-    <section class="column is-centered">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <button id="btnNuevo" type="button" class="btn btn-success">Nuevo Ingreso</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="column is-centered container-fluid">
         <div class="table is-bordered is-striped is-narrow is-hoverable">
 
             <table id="libroTable" class="table table-bordered">
@@ -54,7 +70,7 @@
         </div>
 
         <div class="modal" id="miModal" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Editar Libro</h5>
@@ -62,8 +78,8 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form>
-                <div class="form-row">
+                <form id="formLibro">
+                <div class="modal-body">
                     <div class="form-group col-md-6">
                         <label class="">Codigo Barra</label>
                             <input id="cod" class="form-control" type="text">
@@ -113,7 +129,7 @@
         </div>
         </div>
     </section>
-</main>
+
 
 </body>
 </html>

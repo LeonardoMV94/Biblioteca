@@ -33,4 +33,4 @@ var obtenerDatoEditar = function (tbody, table){
         edic = $("#edic").val(mData.edicionLib),
         edit = $("#edit").val(mData.idEditorial)
     });
-}
+};
