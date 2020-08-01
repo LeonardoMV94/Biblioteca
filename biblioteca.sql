@@ -1,4 +1,3 @@
-create database biblioteca;
 use biblioteca;
 
 ## TABLAS DE BIBLIOTECA ##
